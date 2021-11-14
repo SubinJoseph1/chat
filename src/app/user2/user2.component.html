@@ -1,0 +1,29 @@
+<div class="maincontainer">
+    <div class="header">
+        <a routerLink=""><i class="fa fa-arrow-left"></i></a>
+        <h5>{{username2}}</h5>
+        <i class="fa fa-phone" style="font-size:24px"></i>
+        <i class="fa fa-video-camera" style="font-size:24px"></i>
+        <i class="fa fa-ellipsis-v" style="font-size:24px"></i>
+    </div>
+    <div class="messages">
+        <div class="leftmsg">
+            
+            <p *ngFor="let msg of receivedmsg"><img src={{img}}>
+
+                {{msg}}
+            
+            </p>
+        </div>
+        <div class="rightmsg">
+            <p *ngFor="let sendmsg1 of senddisplay"><img src="{{img3}}">
+                {{sendmsg1}}
+            </p>
+        </div>
+    </div>
+   
+    <div class="input">
+        <input type="text" #user1message>
+        <button (click)="deliver(user1message.value)"> <i class="fa fa-telegram" style="font-size:36px"></i></button>
+    </div>
+</div>

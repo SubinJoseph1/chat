@@ -1,0 +1,22 @@
+<div class="maincontainer">
+    <div class="header">
+        <a routerLink=""><i class="fa fa-arrow-left"></i></a>
+        <h5>Jibin</h5>
+        <i class="fa fa-phone" style="font-size:24px"></i>
+        <i class="fa fa-video-camera" style="font-size:24px"></i>
+        <i class="fa fa-ellipsis-v" style="font-size:24px"></i>
+    </div>
+    <div class="messages">
+        <div class="leftmsg">
+            <p *ngFor="let gmsg of group">{{gmsg}}</p>
+        </div>
+        <div class="rightmsg">
+            
+        </div>
+    </div>
+   
+    <div class="input">
+        <input type="text" #user3message>
+        <button (click)="gropdelivery(user3message.value)"> <i class="fa fa-telegram" style="font-size:36px"></i></button>
+    </div>
+</div>
